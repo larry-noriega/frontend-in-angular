@@ -1,59 +1,34 @@
+
+---
+
 # AngularFrontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
+Este proyecto fue generado utilizando [Angular CLI](https://github.com/angular/angular-cli) versión 19.2.7.
 
-## Development server
+## Inicio del proyecto
 
-To start a local development server, run:
+Para iniciar un servidor de desarrollo local, ejecuta:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Una vez que el servidor esté en funcionamiento, es necesario ir a `http://localhost:4200/`. La aplicación se recargará automáticamente cada vez que se modifique el código fuente.
 
-## Code scaffolding
+## Mejoras recientes
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Refactorizado para implementar principios de MVC y arquitectura limpia**: La estructura del proyecto se ha mejorado para seguir los principios de MVC y arquitectura limpia, mejorando la mantenibilidad y escalabilidad.
+  
+- **Añadida paginación a la tabla de visualización existente**: Se implementó la paginación para una mejor gestión de datos y experiencia del usuario al mostrar grandes conjuntos de datos.
 
-```bash
-ng generate component component-name
-```
+- **Mejoradas las validaciones de entrada de formularios**: Se añadieron validaciones de entrada exhaustivas para garantizar la integridad de los datos y mejorar la retroalimentación del usuario.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+- **Implementado almacenamiento en caché para catálogos**: Se introdujeron mecanismos de caché para ciertos catálogos para mejorar el rendimiento y la eficiencia, reduciendo llamadas innecesarias a la API.
 
-```bash
-ng generate --help
-```
+- **Refactorizados los catálogos de la base de datos**: Se mejoró la estructura y gestión de los catálogos de la base de datos para un mejor rendimiento y organización.
 
-## Building
+## Recursos adicionales
 
-To build the project run:
+Para más información sobre el uso de Angular CLI, incluyendo referencias detalladas de comandos, visita la página de [Descripción general de Angular CLI y referencia de comandos](https://angular.dev/tools/cli).
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+--- 

@@ -15,6 +15,7 @@ import { DocumentType, DocumentTypeResponse } from '../../../Models/DocumentType
   templateUrl: './create-payment.component.html',
   styleUrl: './create-payment.component.css'
 })
+
 export class CreatePaymentComponent implements OnInit {
 
   paymentForm: FormGroup;

@@ -12,7 +12,7 @@
 
     <div class="mb-3">
       <label for="email" class="form-label">Email:</label>
-      <input type="email" class="form-control" id="email" formControlName="email" required>
+      <input type="email" class="form-control" id="email" formControlName="email" required (input)="toUpperCase($event)">
       <div *ngIf="paymentForm.get('email')?.invalid && paymentForm.get('email')?.touched" class="text-danger">
         Se requiere un correo electrónico válido.
       </div>
@@ -43,7 +43,7 @@
       <label for="amount" class="form-label">Monto:</label>
       <input type="number" class="form-control" id="amount" formControlName="amount" required>
       <div *ngIf="paymentForm.get('amount')?.invalid && paymentForm.get('amount')?.touched" class="text-danger">
-        El monto es obligatorio y debe ser mayor que 0.
+        El monto es obligatorio de valor númerico y debe ser mayor que 0.
       </div>
     </div>
 
