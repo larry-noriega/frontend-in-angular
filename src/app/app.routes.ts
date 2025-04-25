@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import { CreatePaymentComponent } from './create-payment/create-payment.component';
-import { TransactionsComponent } from './transactions/transactions.component';
+import { CreatePaymentComponent } from './components/create-payment/create-payment.component';
+import { TransactionsComponent } from './components/transactions/transactions.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/create-payment', pathMatch: 'full' },

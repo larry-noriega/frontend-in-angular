@@ -32,11 +32,11 @@
           <td>{{ transaction.id }}</td>
           <td>{{ transaction.customer && transaction.customer.name || 'Cliente no especificado' }}</td>
           <td>
-            {{ transaction.customer && transaction.customer.type_document || '-' }}
-            {{ transaction.customer && transaction.customer.number_document || '-' }}
+            {{ transaction.customer && transaction.customer.typeDocument || '-' }}
+            {{ transaction.customer && transaction.customer.numberDocument || '-' }}
           </td>
           <td>{{ transaction.customer && transaction.customer.email || 'Email no especificado' }}</td>
-          <td>{{ getPaymentMethodName(transaction.payment_method) }}</td>
+          <td>{{ getPaymentMethodName(transaction.paymentMethod) }}</td>
           <td>{{ getNumericValue(transaction.amount) | currency:transaction.currency }}</td>
           <td>{{ getNumericValue(transaction.fee) | currency:transaction.currency }}</td>
           <td>{{ getNumericValue(transaction.total) | currency:transaction.currency }}</td>
@@ -57,5 +57,26 @@
     <div *ngIf="transactions.length === 0" class="text-center">
       <p>No hay transacciones disponibles</p>
     </div>
+
+    <!-- Pagination Controls -->
+    <nav aria-label="Page navigation">
+      <ul class="pagination justify-content-center">
+        <li class="page-item" [class.disabled]="currentPage === 1">
+          <a class="page-link" (click)="goToPage(currentPage - 1)" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+          </a>
+        </li>
+        <li class="page-item" *ngFor="let page of [].constructor(totalPages); let i = index"
+          [class.active]="i + 1 === currentPage">
+          <a class="page-link" (click)="goToPage(i + 1)">{{ i + 1 }}</a>
+        </li>
+        <li class="page-item" [class.disabled]="currentPage === totalPages">
+          <a class="page-link" (click)="goToPage(currentPage + 1)" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
   </div>
 </div>
